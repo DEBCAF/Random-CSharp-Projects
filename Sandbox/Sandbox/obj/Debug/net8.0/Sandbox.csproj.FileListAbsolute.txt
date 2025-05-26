@@ -1,0 +1,14 @@
+/Users/avis/RiderProjects/Sandbox/Sandbox/bin/Debug/net8.0/Sandbox
+/Users/avis/RiderProjects/Sandbox/Sandbox/bin/Debug/net8.0/Sandbox.deps.json
+/Users/avis/RiderProjects/Sandbox/Sandbox/bin/Debug/net8.0/Sandbox.runtimeconfig.json
+/Users/avis/RiderProjects/Sandbox/Sandbox/bin/Debug/net8.0/Sandbox.dll
+/Users/avis/RiderProjects/Sandbox/Sandbox/bin/Debug/net8.0/Sandbox.pdb
+/Users/avis/RiderProjects/Sandbox/Sandbox/obj/Debug/net8.0/Sandbox.GeneratedMSBuildEditorConfig.editorconfig
+/Users/avis/RiderProjects/Sandbox/Sandbox/obj/Debug/net8.0/Sandbox.AssemblyInfoInputs.cache
+/Users/avis/RiderProjects/Sandbox/Sandbox/obj/Debug/net8.0/Sandbox.AssemblyInfo.cs
+/Users/avis/RiderProjects/Sandbox/Sandbox/obj/Debug/net8.0/Sandbox.csproj.CoreCompileInputs.cache
+/Users/avis/RiderProjects/Sandbox/Sandbox/obj/Debug/net8.0/Sandbox.dll
+/Users/avis/RiderProjects/Sandbox/Sandbox/obj/Debug/net8.0/refint/Sandbox.dll
+/Users/avis/RiderProjects/Sandbox/Sandbox/obj/Debug/net8.0/Sandbox.pdb
+/Users/avis/RiderProjects/Sandbox/Sandbox/obj/Debug/net8.0/Sandbox.genruntimeconfig.cache
+/Users/avis/RiderProjects/Sandbox/Sandbox/obj/Debug/net8.0/ref/Sandbox.dll

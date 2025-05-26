@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "q/EA406ZHvo=",
+  "success": true,
+  "projectFilePath": "/Users/avis/Code/C#/Black Jack/ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "/Users/avis/.nuget/packages/microsoft.netcore.app.ref/8.0.12/microsoft.netcore.app.ref.8.0.12.nupkg.sha512",
+    "/Users/avis/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.12/microsoft.aspnetcore.app.ref.8.0.12.nupkg.sha512",
+    "/Users/avis/.nuget/packages/microsoft.netcore.app.host.osx-x64/8.0.12/microsoft.netcore.app.host.osx-x64.8.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

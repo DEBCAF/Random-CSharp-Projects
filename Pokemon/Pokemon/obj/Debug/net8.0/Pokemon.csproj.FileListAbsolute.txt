@@ -1,0 +1,14 @@
+/Users/avis/RiderProjects/Pokemon/Pokemon/bin/Debug/net8.0/Pokemon
+/Users/avis/RiderProjects/Pokemon/Pokemon/bin/Debug/net8.0/Pokemon.deps.json
+/Users/avis/RiderProjects/Pokemon/Pokemon/bin/Debug/net8.0/Pokemon.runtimeconfig.json
+/Users/avis/RiderProjects/Pokemon/Pokemon/bin/Debug/net8.0/Pokemon.dll
+/Users/avis/RiderProjects/Pokemon/Pokemon/bin/Debug/net8.0/Pokemon.pdb
+/Users/avis/RiderProjects/Pokemon/Pokemon/obj/Debug/net8.0/Pokemon.GeneratedMSBuildEditorConfig.editorconfig
+/Users/avis/RiderProjects/Pokemon/Pokemon/obj/Debug/net8.0/Pokemon.AssemblyInfoInputs.cache
+/Users/avis/RiderProjects/Pokemon/Pokemon/obj/Debug/net8.0/Pokemon.AssemblyInfo.cs
+/Users/avis/RiderProjects/Pokemon/Pokemon/obj/Debug/net8.0/Pokemon.csproj.CoreCompileInputs.cache
+/Users/avis/RiderProjects/Pokemon/Pokemon/obj/Debug/net8.0/Pokemon.dll
+/Users/avis/RiderProjects/Pokemon/Pokemon/obj/Debug/net8.0/refint/Pokemon.dll
+/Users/avis/RiderProjects/Pokemon/Pokemon/obj/Debug/net8.0/Pokemon.pdb
+/Users/avis/RiderProjects/Pokemon/Pokemon/obj/Debug/net8.0/Pokemon.genruntimeconfig.cache
+/Users/avis/RiderProjects/Pokemon/Pokemon/obj/Debug/net8.0/ref/Pokemon.dll
