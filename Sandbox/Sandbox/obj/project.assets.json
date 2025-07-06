@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/avis/Code/RiderProjects/Sandbox/Sandbox/Sandbox.csproj",
+      "projectUniqueName": "/Users/avis/Code/Random-CSharp-Projects/Sandbox/Sandbox/Sandbox.csproj",
       "projectName": "Sandbox",
-      "projectPath": "/Users/avis/Code/RiderProjects/Sandbox/Sandbox/Sandbox.csproj",
+      "projectPath": "/Users/avis/Code/Random-CSharp-Projects/Sandbox/Sandbox/Sandbox.csproj",
       "packagesPath": "/Users/avis/.nuget/packages/",
-      "outputPath": "/Users/avis/Code/RiderProjects/Sandbox/Sandbox/obj/",
+      "outputPath": "/Users/avis/Code/Random-CSharp-Projects/Sandbox/Sandbox/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/avis/.nuget/NuGet/NuGet.Config"

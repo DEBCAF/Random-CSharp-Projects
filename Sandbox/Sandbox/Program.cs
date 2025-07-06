@@ -1,29 +1,32 @@
-﻿class Program
+﻿using System;
+
+namespace Sandbox
 {
-    public static string ToOctal(int num)
+    class Program
     {
-        if (num < 0)
+        static void Main(string[] args)
         {
-            return "Invalid input: negative number";
-        }
-        if (num == 0)
-        {
-            return "0";
+
         }
 
-        string octal = "";
-        while (num > 0)
+        public List<string> FindSum(int num)
         {
-            octal = (num % 8).ToString() + octal;
-            num /= 8;
-        }
-        return octal;
-    }
 
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Enter a number: ");
-        int num = int.Parse(Console.ReadLine());
-        Console.WriteLine(ToOctal(num));
+        }
+
+        public int FindPalin(int num)
+        {
+
+        }
+
+        public bool isPalin(int num)
+        {
+            string strnum = num.ToString();
+
+            for (int i = 0; i < strnum.length ; i++)
+            {
+
+            }
+        }
     }
 }
