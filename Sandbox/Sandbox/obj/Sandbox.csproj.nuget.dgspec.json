@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/avis/Code/Random-CSharp-Projects/Sandbox/Sandbox/Sandbox.csproj": {}
+    "/Users/debcaf/Code/Random-CSharp-Projects/Sandbox/Sandbox/Sandbox.csproj": {}
   },
   "projects": {
-    "/Users/avis/Code/Random-CSharp-Projects/Sandbox/Sandbox/Sandbox.csproj": {
+    "/Users/debcaf/Code/Random-CSharp-Projects/Sandbox/Sandbox/Sandbox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/avis/Code/Random-CSharp-Projects/Sandbox/Sandbox/Sandbox.csproj",
+        "projectUniqueName": "/Users/debcaf/Code/Random-CSharp-Projects/Sandbox/Sandbox/Sandbox.csproj",
         "projectName": "Sandbox",
-        "projectPath": "/Users/avis/Code/Random-CSharp-Projects/Sandbox/Sandbox/Sandbox.csproj",
-        "packagesPath": "/Users/avis/.nuget/packages/",
-        "outputPath": "/Users/avis/Code/Random-CSharp-Projects/Sandbox/Sandbox/obj/",
+        "projectPath": "/Users/debcaf/Code/Random-CSharp-Projects/Sandbox/Sandbox/Sandbox.csproj",
+        "packagesPath": "/Users/debcaf/.nuget/packages/",
+        "outputPath": "/Users/debcaf/Code/Random-CSharp-Projects/Sandbox/Sandbox/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/avis/.nuget/NuGet/NuGet.Config"
+          "/Users/debcaf/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -53,12 +54,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.17, 8.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[8.0.17, 8.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.17, 8.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
