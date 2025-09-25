@@ -1,87 +1,189 @@
-﻿class LinkedLidst
+﻿using System;
+namespace LinkedLidst
 {
-    private int maxSize;
-    private int size;
-    private string[,] items;
-    private int start;
-    private int free;
-    public LinkedLidst(int maxSize)
+    class Program
     {
-        this.maxSize = maxSize;
-        items = new string[maxSize,2];
-        start = -1;
-        free = 0;
-        for (int i=0; i<maxSize; i++)
+        static void Main(string[] args)
         {
-            items[i,1] = (i+1).ToString();
+            
         }
     }
-
-    public boolean isFull()
+    class LinkedLidst
     {
-        if (maxSize == size)
+        private struct Node
         {
-            return true;
+            public string Data;
+            public int Next; 
         }
-        return false;
-    }
-    class node
-    {
-        private string data;
-        private int pointer;
 
-        public node(string data, int pointer)
+        private int maxSize;
+        private int size;
+        private Node[] nodes;
+        private int start; 
+        private int free;  
+
+        public LinkedLidst(int maxSize)
         {
-            this.pointer = pointer;
-            this.data = data;
+            this.maxSize = maxSize;
+            nodes = new Node[maxSize];
+            start = -1;
+            free = 0;
+            for (int i = 0; i < maxSize; i++)
+            {
+                if (i == maxSize - 1)
+                {
+                    nodes[i].Next = -1;
+                }
+                else 
+                {
+                    nodes[i].Next = i + 1;
+                }
+                nodes[i].Data = "";
+            }
         }
-    }
 
-    public 
-    public boolean add(string value)
-    {
-        if (maxSize == size)
+        public bool IsFull()
         {
+            if (size == maxSize)
+            {
+                return true;
+            }
             return false;
         }
-        if (start == -1)
+
+        public bool IsEmpty()
         {
-            items[free,0] = value;
-            start = free;
-            free = int.Parse(items[free,1]);
-            items[free,1] = "-1";
-            return true;
-        }
-        char newchar = value[0];
-        int new = newchar;
-        int next;
-        int temp;
-        for (int i; i<size, int++)
-        {
-            if (i==0)
+            if (size == 0)
             {
-                string first = its[start,0];
-                next = int.Parse(items[start,1]);
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+        }
+
+        private int AllocateNode()
+        {
+            if (free == -1) 
+            {
+                return -1;
+            }
+            int index = free;
+            free = nodes[free].Next;
+            return index;
+        }
+
+        private void FreeNode(int index)
+        {
+            nodes[index].Next = free;
+            free = index;
+        }
+
+        public bool Add(string value)
+        {
+            if (IsFull()) 
+            {
+                return false;
+            }
+            int index = AllocateNode();
+            if (index == -1) 
+            {
+                return false;
+            }
+            nodes[index].Data = value;
+            nodes[index].Next = -1;
+
+            if (start == -1)
+            {
+                start = index;
             }
             else
             {
-                string first = items[next,0];
-                temp = next;
-                next = int.Parse(items[temp,1]);
+                int current = start;
+                while (nodes[current].Next != -1)
+                {
+                    current = nodes[current].Next;
+                }
+                nodes[current].Next = index;
             }
-            char firstchar = first[0];
-            int current = firstchar;
-            int tempfree;
-            if (current < new)
+            size += 1;
+            return true;
+        }
+
+        public bool Delete()
+        {
+            if (IsEmpty()) 
             {
-                tempfree = int.Parse(items[free,1]);
-                items[free,0] = value;
-                items[free,1] = items[temp,1];
-                items[temp,1] = free.ToString();
-                size += 1;
-                free = tempfree;
+                return false;
             }
+            int oldHead = start;
+            start = nodes[oldHead].Next;
+            size -= 1;
+            FreeNode(oldHead);
+            return true;
+        }
+        public bool DeleteByValue(string value)
+        {
+            if (IsEmpty()) 
+            {
+                return false;
+            }
+            if (nodes[start].Data == value)
+            {
+                return Delete();
+            }
+
+            int previous = start;
+            int current = nodes[start].Next;
+            while (current != -1)
+            {
+                if (nodes[current].Data == value)
+                {
+                    nodes[previous].Next = nodes[current].Next;
+                    size -= 1;
+                    FreeNode(current);
+                    return true;
+                }
+                previous = current;
+                current = nodes[current].Next;
+            }
+
+            return false;
+        }
+
+        public int Size()
+        {
+            return size;
+        }
+
+        public bool Contains(string value)
+        {
+            int current = start;
+            while (current != -1)
+            {
+                if (nodes[current].Data == value) 
+                {
+                    return true;
+                }
+                current = nodes[current].Next;
+            }
+            return false;
+        }
+        public void Clear()
+        {
+            if (start != -1)
+            {
+                int current = start;
+                while (current != -1)
+                {
+                    int next = nodes[current].Next;
+                    FreeNode(current);
+                    current = next;
+                }
+            }
+            start = -1;
+            size = 0;
         }
     }
-
 }
