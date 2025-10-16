@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
+using System.Collections.Generic;
 
 namespace HashTables
 {
@@ -19,9 +20,9 @@ namespace HashTables
     }
     class User
     {
-        public string email;
-        public string first_name;
-        public string last_name;
+        private string email;
+        private string first_name;
+        private string last_name;
         private int hash;
 
         public User(string email, string first_name, string last_name)
@@ -40,47 +41,79 @@ namespace HashTables
             }
             return hash.ToString();
         }
+
+        public string GetEmail()
+        {
+            return email;
+        }
+
+        public string GetFirstName()
+        {
+            return first_name;
+        }
+
+        public string GetLastName()
+        {
+            return last_name;
+        }
     }
     class HashTable
     {
-        private User?[] users;
+        private List<User>[] users;
         private int size;
 
         public HashTable(int size)
         {
             this.size = size;
-            users = new User?[size];
+            users = new List<User>[size];
+            for (int i = 0; i < size; i++)
+            {
+                users[i] = new List<User>();
+            }
         }
 
         public bool Add(User user)
         {
             string hash = user.GetHash();
             int index = int.Parse(hash) % size;
-            if (users[index] == null)
+            foreach (User existing in users[index])
             {
-                users[index] = user;
-                return true;
+                if (existing.GetEmail() == user.GetEmail())
+                {
+                    return false;
+                }
             }
-            return false;
+            users[index].Add(user);
+            return true;
         }
 
         public bool Remove(User user)
         {
             string hash = user.GetHash();
             int index = int.Parse(hash) % size;
-            if (users[index] == null)
+            for (int i = 0; i < users[index].Count; i++)
             {
-                return false;
+                if (users[index][i].GetEmail() == user.GetEmail())
+                {
+                    users[index].RemoveAt(i);
+                    return true;
+                }
             }
-            users[index] = null;
-            return true;
+            return false;
         }
 
         public bool Contains(User user)
         {
             string hash = user.GetHash();
             int index = int.Parse(hash) % size;
-            return users[index] != null;
+            foreach (User existing in users[index])
+            {
+                if (existing.GetEmail() == user.GetEmail())
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
