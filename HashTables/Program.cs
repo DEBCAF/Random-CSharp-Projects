@@ -16,6 +16,7 @@ namespace HashTables
             hashTable.Add(user2);
             Console.WriteLine(hashTable.Contains(user1));
             Console.WriteLine(hashTable.Contains(user2));
+            Console.WriteLine(hashTable.Display("test@test.com"));
         }
     }
     class User
@@ -114,6 +115,24 @@ namespace HashTables
                 }
             }
             return false;
+        }
+
+        public string Display(string email)
+        {
+            int hash = email.GetHashCode();
+            if (hash < 0)
+            {
+                hash = -hash;
+            }
+            int index = hash % size;
+            foreach (User existing in users[index])
+            {
+                if (existing.GetEmail() == email)
+                {
+                    return ($"Email: {existing.GetEmail()} | First Name: {existing.GetFirstName()} | Last Name: {existing.GetLastName()}");
+                }
+            }
+            return ("Can't find it");
         }
     }
 }
