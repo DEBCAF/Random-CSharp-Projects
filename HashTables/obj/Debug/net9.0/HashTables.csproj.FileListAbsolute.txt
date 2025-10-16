@@ -1,0 +1,15 @@
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/obj/Debug/net9.0/HashTables.GeneratedMSBuildEditorConfig.editorconfig
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/obj/Debug/net9.0/HashTables.AssemblyInfoInputs.cache
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/obj/Debug/net9.0/HashTables.AssemblyInfo.cs
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/obj/Debug/net9.0/HashTables.csproj.CoreCompileInputs.cache
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/obj/Debug/net9.0/HashTables.sourcelink.json
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/bin/Debug/net9.0/HashTables
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/bin/Debug/net9.0/HashTables.deps.json
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/bin/Debug/net9.0/HashTables.runtimeconfig.json
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/bin/Debug/net9.0/HashTables.dll
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/bin/Debug/net9.0/HashTables.pdb
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/obj/Debug/net9.0/HashTables.dll
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/obj/Debug/net9.0/refint/HashTables.dll
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/obj/Debug/net9.0/HashTables.pdb
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/obj/Debug/net9.0/HashTables.genruntimeconfig.cache
+/Users/debcaf/Code/Random-CSharp-Projects/HashTables/obj/Debug/net9.0/ref/HashTables.dll
