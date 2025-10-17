@@ -12,11 +12,30 @@ namespace HashTables
             HashTable hashTable = new HashTable(10);
             User user1 = new User("test@test.com", "John", "Smith");
             User user2 = new User("test2@test.com", "Lyndon", "Johnson");
+            User user3 = new User("A", "B", "C");
+            User user4 = new User("D", "E", "F");
+            User user5 = new User("G", "H", "I");
+            User user6 = new User("J", "K", "L");
+            User user7 = new User("M", "N", "O");
+            User user8 = new User("P", "Q", "R");
+            User user9 = new User("S", "T", "U");
+            User user10 = new User("V", "W", "X");
+            User user11 = new User("Y", "Z", "A");
             hashTable.Add(user1);
             hashTable.Add(user2);
+            hashTable.Add(user3);
+            hashTable.Add(user4);
+            hashTable.Add(user5);
+            hashTable.Add(user6);
+            hashTable.Add(user7);
+            hashTable.Add(user8);
+            hashTable.Add(user9);
+            hashTable.Add(user10);
+            hashTable.Add(user11);
             Console.WriteLine(hashTable.Contains(user1));
             Console.WriteLine(hashTable.Contains(user2));
             Console.WriteLine(hashTable.Display("test@test.com"));
+            Console.WriteLine(hashTable.Display("A"));
         }
     }
     class User

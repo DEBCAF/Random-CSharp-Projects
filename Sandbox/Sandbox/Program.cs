@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace Sandbox
 {
@@ -8,8 +6,6 @@ namespace Sandbox
     {
         static void Main(string[] args)
         {
-            string? name = "name";
-            Console.WriteLine(name.GetHashCode());
         }
     }
 }
