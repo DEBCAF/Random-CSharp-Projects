@@ -1,0 +1,5 @@
+/Users/debcaf/Code/Random-CSharp-Projects/Graphs/obj/Debug/net9.0/Graphs.GeneratedMSBuildEditorConfig.editorconfig
+/Users/debcaf/Code/Random-CSharp-Projects/Graphs/obj/Debug/net9.0/Graphs.AssemblyInfoInputs.cache
+/Users/debcaf/Code/Random-CSharp-Projects/Graphs/obj/Debug/net9.0/Graphs.AssemblyInfo.cs
+/Users/debcaf/Code/Random-CSharp-Projects/Graphs/obj/Debug/net9.0/Graphs.csproj.CoreCompileInputs.cache
+/Users/debcaf/Code/Random-CSharp-Projects/Graphs/obj/Debug/net9.0/Graphs.sourcelink.json

@@ -6,18 +6,31 @@ namespace Tree
     {
         static void Main(string[] args)
         {
-            Tree binarytree = new Tree("morning");
-            binarytree.insert("apple");
-            binarytree.insert("zebra");
-            binarytree.search("apple");
+            Tree binarytree = new Tree("dawn");
+            binarytree.insert("dave");
+            binarytree.insert("beth");
+            binarytree.insert("david");
+            binarytree.insert("cindi");
+            binarytree.insert("mike");
+            binarytree.insert("gina");
+            binarytree.insert("pat");
+            binarytree.insert("sue");
+            Console.WriteLine("In order traversal:");
             binarytree.in_order_traversal(binarytree.getRoot());
+            Console.WriteLine("Post order traversal:");
+            binarytree.post_order_traversal(binarytree.getRoot());
+            binarytree.delete("mike");
+            Console.WriteLine("In order traversal:");
+            binarytree.in_order_traversal(binarytree.getRoot());
+            Console.WriteLine("Post order traversal:");
+            binarytree.post_order_traversal(binarytree.getRoot());
         }
     }
     class Node
     {
         private Node? L;
         private Node? R;
-        private string data;
+        private string? data;
         public Node(string data)
         {
             this.data = data;
@@ -36,46 +49,62 @@ namespace Tree
         {
             return R;
         }
+        public bool Set(string data)
+        {
+            this.data = data;
+            return true;
+        }
         public bool Add(string ndata)
         {
-            char newstring = ndata[0];
-            char oldstring = data[0];
-            int newValue = newstring;
-            int oldValue = oldstring;
-            if (newValue < oldValue)
+            int count = 0;
+            while (true)
             {
-                if (L == null)
+                char newstring = ndata[count];
+                char oldstring = data[count];
+                int newValue = newstring;
+                int oldValue = oldstring;
+                if (newValue < oldValue)
                 {
-                    L = new Node(ndata);
-                    Console.WriteLine($"Added data {ndata} to left node");
-                    return true;
+                    if (L == null)
+                    {
+                        L = new Node(ndata);
+                        Console.WriteLine($"Added data {ndata} to left node");
+                        return true;
+                    }
+                    else
+                    {
+                        return L.Add(ndata);
+                    }
+                }
+                else if (oldValue < newValue)
+                {
+                    if (R == null)
+                    {
+                        R = new Node(ndata);
+                        Console.WriteLine($"Added data {ndata} to right node");
+                        return true;
+                    }
+                    else
+                    {
+                        return R.Add(ndata);
+                    }
                 }
                 else
                 {
-                    return L.Add(ndata);
-                }
+                    count += 1;
+                } 
             }
-            else if (oldValue <= newValue)
-            {
-                if (R == null)
-                {
-                    R = new Node(ndata);
-                    Console.WriteLine($"Added data {ndata} to right node");
-                    return true;
-                }
-                else
-                {
-                    return R.Add(ndata);
-                }
-            }
-            else
-            {
-                return false;
-            } 
         }
         public string Display()
         {
             return ($"Left Node: {L?.getData() ?? "null"} | Right Node: {R?.getData() ?? "null"}");
+        }
+        public bool Delete()
+        {
+            this.data = null;
+            this.L = null;
+            this.R = null;
+            return true;
         }
     }
     class Tree
@@ -125,13 +154,68 @@ namespace Tree
         }
         public void in_order_traversal(Node currentnode)
         {
-            if (currentnode == null)
+            if (currentnode != null)
             {
-                return;
+                in_order_traversal(currentnode.left());
+                Console.WriteLine(currentnode.getData());
+                in_order_traversal(currentnode.right());
             }
-            in_order_traversal(currentnode.left());
-            Console.WriteLine(currentnode.getData());
-            in_order_traversal(currentnode.right());
+        }
+        public void post_order_traversal(Node currentnode)
+        {
+            if (currentnode != null)
+            {
+                post_order_traversal(currentnode.left());
+                post_order_traversal(currentnode.right());
+                Console.WriteLine(currentnode.getData());
+            }
+        }
+        public bool delete(string data)
+        {
+            if (!search(data))
+            {
+                return false;
+            }
+            Node? currentnode = root;
+            Node? previousnode = null;
+            Node? deletenode;
+            while (currentnode != null)
+            {
+                if (data == currentnode.getData())
+                {
+                    Console.WriteLine($"Found data: {data}");
+                    break;
+                }
+                else
+                {
+                    char currentstring = currentnode.getData()[0];
+                    char searchedstring = data[0];
+                    int current = currentstring;
+                    int searched = searchedstring;
+                    if (searched<current)
+                    {
+                        currentnode = currentnode.left();
+                    }
+                    else if (current<=searched)
+                    {
+                        currentnode = currentnode.right();
+                    }
+                }
+            }
+            deletenode = currentnode;
+            currentnode = currentnode.left();
+            while (currentnode != null)
+            {
+                previousnode = currentnode;
+                currentnode = currentnode.right();
+            }
+            if (previousnode != null)
+            {
+                deletenode.Set(previousnode.getData());
+                previousnode.Delete();
+            }
+            Console.WriteLine($"Deleted: {data}");
+            return true;
         }
     }
 }
